@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" type="text/css" href="/assets/Stylesheets/item.css" />
+    <link rel="shortcut icon" type="image/png" href="/assets/Images/favicon.ico" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css"
+    />
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title><%=item.itemName%></title>
+  </head>
+  <body>
+    <% include partials/header.ejs%>
+    <% include partials/user-navigation.ejs%>
+    <div class="container flex">
+      <% include partials/site-navigation.ejs%>
+
+      <div class="productDescription">
+        <img src="<%=item.getImageURL%>" alt="Spiderman" id="productImage" />
+        <div class="movieInfo">
+          <h2><%=item.itemName%></h2>
+          <h4>
+            Category : <%=item.catalogCategory%>
+             <br/>
+            Rating : <span id = "starRating">
+              &bigstar;&bigstar;&bigstar;&bigstar;&star;</span>
+          </h4>
+          <div class="play">
+            <a class="button" href="#"> <img src="/assets/Images/play.jpg" id="playButton" alt="playButton"/></a>
+            <h5>
+              <a href="#" id="buyOption">
+                 <strong>Buy Now From $2.99 (USD)</strong> 
+              </a>
+            </h5>
+
+            <a class="button " href="/myItems" id="btnSave"> <span  id="loveBtnSave">&hearts;</span> Save it  
+             
+            </a>
+
+            <a class="button " href="/categories/feedback/<%=item.itemCode%>" id="btnRate"> <span  id="starBtnRate">&star;</span> Rate it   
+            
+            </a> 
+            
+ 
+          </div>
+        </div>
+
+        <p id="Gist">
+          <%= item.Description%>
+          <a class="button " onclick="window.history.back();" id="btnGoBack"> 
+            <span  id="goBackArrow" >&#8592;</span> Continue Browsing
+            
+          </a>
+        </p>
+      </div>
+    </div>
+    <footer>
+      <strong>
+        &copy; Posted by: Kishan Singh Contact information:<a
+          href="mailto:ksingh15@uncc.edu"
+        >
+          ksingh15@uncc.edu</a
+        >
+      </strong>
+    </footer>
+  </body>
+</html>

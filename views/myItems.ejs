@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" type="text/css" href="/assets/Stylesheets/myItems.css" />
+    <link rel="shortcut icon" type="image/png" href="/assets/Images/favicon.ico" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css"
+    />
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Cart</title>
+  </head>
+  <body>
+    <% include partials/header.ejs%>
+
+    <% include partials/user-navigation.ejs%>
+
+    <div class="container flex">
+      <% include partials/site-navigation.ejs%>
+
+      <div class=" productList">
+        <div class="row">
+            <div class="col-md-3"><strong>Product</strong></div>
+            <div class="col-md-1"> <strong>Category</strong></div>
+            <div class="col-md-3"><strong>Rating</strong></div>
+            <div class="col-md-1"><strong>Shipped</strong></div>
+            <div class="col-md-2"></div>
+            <div class="col-md-2"></div>
+          </div> 
+        <div class="row">
+            <hr>
+        </div>
+        <div class="row">
+          <div class="col-md-3">Spiderman-3</div>
+          <div class="col-md-1">Movie</div>
+          <div class="col-md-3"><span id = "starRatingProduct1">
+                &bigstar;&bigstar;&bigstar;&bigstar;&star;</span></div>
+          <div class="col-md-1"><input type="checkbox"   checked> </div>
+          <div class="col-md-2"> 
+                <button onclick="window.history.back();" class="btn btn-success"  > Update</button>
+              </div>
+              <div class="col-md-2">   
+                   <a href="./myItems" class="btn btn-danger"  >&#9940; Delete</a></div>
+        </div> 
+        <div class="row">
+                <hr>
+            </div>
+        <div class="row">
+          <div class="col-md-3">Special K Cereal Chocolatey</div>
+          <div class="col-md-1">Grocery</div>
+          <div class="col-md-3"><span id = "starRatingProduct2">
+                &bigstar;&bigstar;&bigstar;&star;&star;</span></div>
+          <div class="col-md-1"><input type="checkbox"   ></div>
+          <div class="col-md-2"> 
+            <a href="./item" class="btn btn-success" > Update</a>
+          </div>
+          <div class="col-md-2">   
+               <a href="./myItems" class="btn btn-danger"  > &#9940; Delete</a></div>
+        </div> <div class="row">
+                <hr>
+            </div>
+
+            <p  id="shareLink"> Click <strong><u> here</u></strong> to share this item</p>
+            
+      </div>
+    </div>
+    <footer>
+      <strong>
+        &copy; Posted by: Kishan Singh Contact information:<a
+          href="mailto:ksingh15@uncc.edu"
+        >
+          ksingh15@uncc.edu</a
+        >
+      </strong>
+    </footer>
+  </body>
+</html>

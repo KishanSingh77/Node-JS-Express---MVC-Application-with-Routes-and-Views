@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="/assets/Stylesheets/index.css"
+    />
+    <link
+      rel="shortcut icon"
+      type="image/png"
+      href="/assets/Images/favicon.ico"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css"
+    />
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>About Us</title>
+  </head>
+  <body>
+    <% include partials/header.ejs%> <% include partials/user-navigation.ejs%>
+
+    <div class="container flex">
+      <% include partials/site-navigation.ejs%>
+      <div class="  content">
+        <div class="row">
+          <div class="col-md-12">
+            <h3>Contact Customer Service</h3>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <p>
+              Please select a question first so we can connect you to the right
+              agent. The Customer Service Team is online 24/7.
+              <br />
+              <button id="chatBtn">Chat Now!</button>
+            </p>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-12">
+            <h3>
+              If you need help, we offer a number of options for customer
+              support.
+            </h3>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <p>
+              Email : ksingh15@uncc.edu <br />
+              Want to reach us old style ? Here is ourpostal address:
+              <br />
+              Smart-Mart Internet Private Limited Vaishnavi Summit,No 6/B,7th
+              Main,80 Feet Road,3rd Block,Koramangala,Bangalore - 560034
+            </p>
+          </div>
+        </div>
+
+        <h3>TRACK, CANCEL, RETURN/EXCHANGE</h3>
+        <p><button id="orderBtn">Track Orders</button></p>
+        <button type="button" class="button-theme-filled">
+          &#9742; If you want to talk to a person, click here to request a
+          callback!
+        </button>
+      </div>
+    </div>
+    <% include partials/footer.ejs%>
+  </body>
+</html>

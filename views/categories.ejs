@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="/assets/Stylesheets/categories.css"
+    />
+    <link
+      rel="shortcut icon"
+      type="image/png"
+      href="/assets/Images/favicon.ico"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css"
+    />
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Category</title>
+  </head>
+  <body>
+    <% include partials/header.ejs%> <% include partials/user-navigation.ejs%>
+
+    <div class="container flex">
+      <% include partials/site-navigation.ejs%>
+
+      <div class="category">
+        <ul>
+          <% for(var i=0; i < categories.length; i++) { %>
+          <li><%= categories[i] %> 
+            <% for(var j=0; j < itemList.length; j++) { %>
+            <ul>
+              <% if(categories[i]===itemList[j].catalogCategory){%>
+              <li>
+           <a href="/categories/item/<%= itemList[j].itemCode%>"> <%=itemList[j].itemName %> </a>       
+              </li>
+              <%}%>
+            </ul>
+            <% } %></li>
+            <% } %></li>
+        </ul>
+      </div>
+    </div>
+    <footer>
+      <strong>
+        &copy; Posted by: Kishan Singh Contact information:<a
+          href="mailto:ksingh15@uncc.edu"
+        >
+          ksingh15@uncc.edu</a
+        >
+      </strong>
+    </footer>
+  </body>
+</html>
